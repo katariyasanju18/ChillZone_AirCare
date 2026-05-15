@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChillZone AirCare</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        ChillZone AirCare
+    </div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+
+    <i class="fa-solid fa-bars"></i>
+
+</div>
+    <ul class="nav-links">
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#services">Services</a></li>
+
+        <li><a href="#about">About</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- Flash Message -->
+
+{% with messages = get_flashed_messages() %}
+
+    {% if messages %}
+
+        {% for message in messages %}
+
+            <div class="flash-message">
+
+                {{ message }}
+
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
+
+{% endwith %}
+
+<!-- Hero Section -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Smart Cooling Solutions
+            for Modern Homes & Offices
+        </h1>
+
+        <p>
+            ChillZone AirCare provides professional AC installation,
+            repair, maintenance, and cooling solutions with expert technicians
+            and affordable pricing.
+        </p>
+
+        <button>
+            Book Service
+        </button>
+
+    </div>
+
+</section>
+
+<!-- Services Section -->
+
+<section id="services" class="services reveal">
+
+    <h2>Our Services</h2>
+
+    <div class="service-container">
+
+        <div class="service-box" onclick="openModal()">
+
+            <h3>AC Installation</h3>
+
+            <p>
+                Professional split and window AC installation services
+                for homes and offices.
+            </p>
+
+        </div>
+
+        <div class="service-box">
+
+            <h3>Gas Refilling</h3>
+
+            <p>
+                Improve cooling performance with high-quality AC gas refilling.
+            </p>
+
+        </div>
+
+        <div class="service-box">
+
+            <h3>AMC Maintenance</h3>
+
+            <p>
+                Complete annual maintenance services for long-lasting AC performance.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Modal -->
+
+<div id="serviceModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">
+
+            &times;
+
+        </span>
+
+        <h2>AC Installation</h2>
+
+        <p>
+            We provide professional AC installation services for
+            split ACs, window ACs, and commercial cooling systems.
+        </p>
+
+        <ul>
+
+            <li>Experienced Technicians</li>
+
+            <li>Fast Installation</li>
+
+            <li>Affordable Pricing</li>
+
+            <li>1 Year Service Support</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- Statistics Section -->
+
+<section class="stats-section reveal">
+
+    <div class="stats-container">
+
+        <div class="stat-box">
+
+            <h2>500+</h2>
+
+            <p>Happy Clients</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>3+</h2>
+
+            <p>Years Experience</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>600+</h2>
+
+            <p>Services Completed</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- About Section -->
+
+<section id="about" class="about reveal">
+    <div class="about-image">
+
+        <img src="/static/images/img.png" alt="AC Service">
+
+    </div>
+
+    <div class="about-content">
+
+        <h2>About ChillZone AirCare</h2>
+
+        <p>
+            ChillZone AirCare provides trusted air conditioning installation,
+            repair, and maintenance services for homes, offices,
+            and commercial spaces.
+        </p>
+
+        <p>
+            Our experienced technicians ensure fast service,
+            customer satisfaction, and reliable cooling solutions
+            with modern technology and affordable pricing.
+        </p>
+
+        <button>Learn More</button>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+
+<section class="why-us reveal">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-container">
+
+        <div class="why-box">
+
+            <h3>24/7 Support</h3>
+
+            <p>
+                Emergency AC support services available anytime.
+            </p>
+
+        </div>
+
+        <div class="why-box">
+
+            <h3>Expert Technicians</h3>
+
+            <p>
+                Skilled and certified professionals for quality AC solutions.
+            </p>
+
+        </div>
+
+        <div class="why-box">
+
+            <h3>Affordable Pricing</h3>
+
+            <p>
+                Transparent pricing with no hidden charges.
+            </p>
+
+        </div>
+
+        <div class="why-box">
+
+            <h3>Fast Service</h3>
+
+            <p>
+                Quick response and timely completion of every project.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Testimonials -->
+
+<section class="testimonials reveal">
+    <h2>What Our Customers Say</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-box">
+
+            <p>
+                Excellent AC repair service. The technician arrived on time
+                and fixed the cooling issue quickly. Highly recommended.
+            </p>
+
+            <h3>★★★★★</h3>
+
+            <h4>- Kartik Rajpoot</h4>
+
+        </div>
+
+        <div class="testimonial-box">
+
+            <p>
+                Very professional installation service with affordable pricing.
+                The staff was friendly and experienced.
+            </p>
+
+            <h3>★★★★</h3>
+
+            <h4>- Rudransh Choubey</h4>
+
+        </div>
+
+        <div class="testimonial-box">
+
+            <p>
+                Great maintenance service. My AC works smoothly now
+                and cooling performance has improved a lot.
+            </p>
+
+            <h3>★★★★★</h3>
+
+            <h4>- Khushi Jain</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA Section -->
+
+<section class="cta-section reveal">
+
+    <div class="cta-content">
+
+        <h2>
+
+            Need Fast & Reliable AC Service?
+
+        </h2>
+
+        <p>
+
+            ChillZone AirCare provides professional cooling solutions,
+            expert technicians, and affordable AC repair services
+            for homes and businesses.
+
+        </p>
+
+        <a href="#contact">
+
+            <button>
+
+                Book Your Service Today
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="contact reveal">
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+
+        <form action="/contact" method="POST">
+
+            <input type="text"
+                   name="name"
+                   placeholder="Enter Your Name"
+                   required>
+
+            <input type="email"
+                   name="email"
+                   placeholder="Enter Your Email"
+                   required>
+
+            <input type="text"
+                   name="phone"
+                   placeholder="Enter Your Phone Number"
+                   required>
+
+            <textarea name="message"
+                      placeholder="Write Your Message"
+                      rows="6"
+                      required></textarea>
+
+            <button type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- Footer -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <h2>ChillZone AirCare</h2>
+
+            <p>
+                Professional AC installation, repair, and maintenance
+                services for homes and businesses.
+            </p>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#services">Services</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="footer-box">
+
+            <h3>Contact Info</h3>
+
+            <p>📞 +91-8965827364</p>
+
+            <p>📧 chillzoneaircare@gmail.com</p>
+
+            <p>📍 Palasia, Indore, Madhya Pradesh</p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ChillZone AirCare | All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
