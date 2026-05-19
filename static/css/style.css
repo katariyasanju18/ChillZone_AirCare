@@ -106,7 +106,7 @@ body{
 
     background-image:url('/static/images/ac_img.jpg');
 
-    background-size:cover;
+    background-size:contain;
 
     background-position:center;
 
@@ -118,11 +118,11 @@ body{
 
     align-items:center;
 
-    text-align:left;
+    text-align:right;
 
     color:white;
 
-    padding-right:60px;
+    padding-right:50px;
 
     position:relative;
 }
@@ -139,15 +139,15 @@ body{
 }
 
 .hero-content h1{
-    font-size:50px;
+    font-size:40px;
     margin-bottom:20px;
     line-height:1.3;
 }
 
 .hero-content p{
-    font-size:22px;
-    margin-bottom:30px;
-    line-height:1.7;
+    font-size:18px;
+    margin-bottom:25px;
+    line-height:1.5;
 }
 
 .hero-content button{
@@ -625,7 +625,7 @@ body{
     }
 
     .hero-content h1{
-        font-size:36px;
+        font-size:30px;
     }
 
     .hero-content p{
