@@ -558,7 +558,49 @@ body{
 @media(max-width:992px){
 
 
-    /* Testimonials Mobile Fix */
+/* Mobile Hero Section Fix */
+
+.hero{
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    background-position:left center;
+
+    height:100vh;
+}
+
+.hero-content{
+
+    max-width:100%;
+
+    padding:25px;
+
+    background:rgba(0,0,0,0.35);
+
+    border-radius:15px;
+}
+
+.hero-content h1{
+
+    font-size:32px;
+
+    line-height:1.4;
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+    line-height:1.7;
+}
+
+/* Testimonials Mobile Fix */
 
 .testimonials{
 
