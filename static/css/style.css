@@ -104,14 +104,11 @@ body{
 
     height:100vh;
 
-    background-image:
-    linear-gradient(rgba(0,0,0,0.55),
-    rgba(0,0,0,0.55)),
-    url('/static/images/ac_img.jpg');
+    background-image:url('/static/images/ac_img.jpg');
 
     background-size:cover;
 
-    background-position:left center;
+    background-position:center;
 
     background-repeat:no-repeat;
 
@@ -125,20 +122,20 @@ body{
 
     color:white;
 
-    padding-right:80px;
+    padding-right:60px;
+
+    position:relative;
 }
 
 .hero-content{
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,0.25);
 
-    padding:50px;
+    padding:45px;
 
-    border-radius:20px;
+    border-radius:18px;
 
     max-width:650px;
-
-    backdrop-filter:blur(5px);
 }
 
 .hero-content h1{
@@ -558,7 +555,35 @@ body{
 
 /* Responsive Design */
 
-@media(max-width:768px){
+@media(max-width:992px){
+
+
+    /* Testimonials Mobile Fix */
+
+.testimonials{
+
+    padding:80px 20px;
+}
+
+.testimonial-container{
+
+    width:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+}
+
+.testimonial-box{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin:auto;
+}
 
     /* Navbar */
 
