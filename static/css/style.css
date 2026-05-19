@@ -1,3 +1,8 @@
+html, body{
+    overflow-x: hidden;
+    width: 100%;
+}
+
 html{
     scroll-behavior:smooth;
 }
@@ -110,11 +115,8 @@ body{
 }
 
 .hero-content{
-    background:rgba(0,0,0,0.65);
-    padding:40px;
-    border-radius:20px;
-    max-width:750px;
-    box-shadow:0px 10px 20px rgba(0,0,0,0.3);
+    width: 90%;
+    margin: auto;
 }
 
 .hero-content h1{

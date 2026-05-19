@@ -27,7 +27,7 @@ def home():
 def contact():
     name = request.form['name']
     email = request.form['email']
-    phone = request.form['Phone']  # request.form['field_name'] and name="phone" Both names MUST match exactly.
+    phone = request.form['phone']  # request.form['field_name'] and name="phone" Both names MUST match exactly.
     message = request.form['message']
 
     new_contact = Contact(
